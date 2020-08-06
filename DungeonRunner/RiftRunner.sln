@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1169
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiftExe", "RiftExe\RiftExe.csproj", "{6E40A05D-8C97-45A8-96F0-993862E64D3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiftLibrary", "RiftLibrary\RiftLibrary.csproj", "{38614DD3-68BE-47CA-9D7E-AA9D3A4A3A75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E40A05D-8C97-45A8-96F0-993862E64D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E40A05D-8C97-45A8-96F0-993862E64D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E40A05D-8C97-45A8-96F0-993862E64D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E40A05D-8C97-45A8-96F0-993862E64D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38614DD3-68BE-47CA-9D7E-AA9D3A4A3A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38614DD3-68BE-47CA-9D7E-AA9D3A4A3A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38614DD3-68BE-47CA-9D7E-AA9D3A4A3A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38614DD3-68BE-47CA-9D7E-AA9D3A4A3A75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBA7828E-E4F5-4DAF-AF7B-CF405D8B15C3}
+	EndGlobalSection
+EndGlobal
