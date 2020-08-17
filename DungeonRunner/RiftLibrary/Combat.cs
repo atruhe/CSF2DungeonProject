@@ -40,5 +40,28 @@ namespace RiftLibrary
                 DoAttack(monster, player);
             }
         }
+
+        public static void DoHeal(Character attacker, Character defender)
+        {
+            Random rand = new Random();
+            int diceRoll = rand.Next(1, 101);
+            System.Threading.Thread.Sleep(250);
+            if (diceRoll <= attacker.CalcHitChance() - defender.CalcBlock())
+            {
+                int lifeHealed = attacker.CalcDamage();
+
+                attacker.Life += lifeHealed;
+
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("{0} healed for {1} life!",
+                    attacker.Name,
+                    lifeHealed);
+                Console.ResetColor();
+            }
+            else {
+                Console.WriteLine("{0} FAILED TO HEAL!", attacker.Name);
+                DoAttack(defender, attacker);
+            }
+        }
     }
 }

@@ -18,33 +18,35 @@ namespace RiftExe
             int playerLives = 3;
 
             do
-            {
-                Console.WriteLine("What shall we call you?");
+            {               
+                Console.WriteLine("Welcome to Tristram, hero. Many like you have come before and fallen.\nWhat shall we call you?");
                 string playerName = Console.ReadLine();
+                Race characterRace = Race.Barbarian;
+
                 Console.WriteLine("And what be your class {0}?\nB)arbarian\nD)emon Hunter\nM)onk", playerName);
-                //ConsoleKey playerRace = Console.ReadKey().Key;
-                //switch (Console.ReadKey().Key)
-                //{
-                //
-                //    case ConsoleKey.B:
-                //        playerRace = Race.Barbarian;
-                //        break;
-                //    case ConsoleKey.D:
-                //        playerRace = Race.DemonHunter;
-                //        break;
-                //    case ConsoleKey.M:
-                //        playerRace = Race.Monk;
-                //        break;
-                //    case ConsoleKey.P:
-                //        playerRace = Race.Pleb;
-                //        break;
-                //    default:
-                //        break;
-                //}
-                Weapon scimitar = new Weapon("Rusty Dull Scimitar", 10, 10, 0, false);
+                ConsoleKey userRace = Console.ReadKey(true).Key;
+                switch (userRace)
+                {                
+                    case ConsoleKey.B:
+                        characterRace = Race.Barbarian;
+                        break;
+                    case ConsoleKey.D:
+                        characterRace = Race.DemonHunter;
+                        break;
+                    case ConsoleKey.M:
+                        characterRace = Race.Monk;
+                        break;
+                    case ConsoleKey.P:
+                        characterRace = Race.Pleb;
+                        break;
+                    default:
+                        break;
+                }
+                Console.Clear();
 
+                Weapon scimitar = new Weapon("Rusty Dull Scimitar", 10, 20, 0, false);
 
-                Player player = new Player(playerName, 75, 25, 50, 50, 10, Race.Pleb, scimitar);
+                Player player = new Player(playerName, 75, 25, 50, 50, 10, characterRace, scimitar);
                 Console.WriteLine("\nWelcome to Tristram.\nYou see the charred remains of buildings. Scorched corpses litter the ground. It is but a small glimpse into Hell.\n");
 
                 int killCount = 0;
@@ -70,6 +72,7 @@ namespace RiftExe
                     {
                         Console.WriteLine("\nChoose an Action:\n" +
                             "A)ttack\n" +
+                            "H)eal\n" +
                             "R)UN AWAY!\n" +
                             "P)layer Stats\n" +
                             "M)onster Stats\n" +
@@ -94,7 +97,10 @@ namespace RiftExe
                                     reloadRoom = true;
                                     killCount++;
                                 }
-                                                                break;
+                                break;
+                            case ConsoleKey.H:
+                                Combat.DoHeal(player, monster);
+                                break;
                             case ConsoleKey.R:
                                 Console.WriteLine("The " + monster.Name + " attacks you as you flee.");
                                 Combat.DoAttack(monster, player);

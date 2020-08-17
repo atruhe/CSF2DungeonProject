@@ -20,6 +20,7 @@ namespace RiftLibrary
             switch (CharacterRace)
             {
                 case Race.Barbarian:
+                    life += 20;
                     MaxLife += 20;
                     Block += 20;
                     HitChance -= 20;
@@ -52,6 +53,8 @@ namespace RiftLibrary
                 //    Block -= 10;
                 //    break;
                 case Race.Pleb:
+                    MaxLife += 100;
+                    life += 100;
                     break;
                 default:
                     break;
