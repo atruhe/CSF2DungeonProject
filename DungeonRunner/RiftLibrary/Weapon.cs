@@ -39,7 +39,7 @@ namespace RiftLibrary
                 MinDamage,
                 MaxDamage,
                 BonusHitChance >= 0 ? string.Format("+{0}", BonusHitChance) : string.Format("{0}", BonusHitChance),
-            IsTwoHanded ? "This" + Name + " requires both hands to wield." : "This" + Name + "leaves one hand free.");
+            IsTwoHanded ? "This " + Name + " requires both hands to wield." : "This " + Name + " leaves one hand free.");
         }
     }
 }

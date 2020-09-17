@@ -95,7 +95,7 @@ namespace RiftLibrary
                     break;
             }//end switch
 
-            return string.Format("<=~ {0} ~=>\nLife: {1} of {2}\nHit Chance: {3}%\nWeapon: \n{4}\nHeal: {5}\nBlock: {6}\n{7}",
+            return string.Format("<=~ {0} ~=>\nLife: {1} of {2}\nHit Chance: {3}%\nWeapon: {4}\nExtra Heal: {5}\nBlock: {6}\n{7}",
                 Name,
                 Life,
                 MaxLife,
